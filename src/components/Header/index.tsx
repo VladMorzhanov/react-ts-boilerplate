@@ -1,10 +1,8 @@
-// @flow
-
-import React from 'react'
-import styled, { StyledComponentClass } from 'styled-components'
+import * as React from 'react'
+import styled from 'styled-components'
 import { observer } from 'mobx-react'
 
-const Wrapper: StyledComponentClass = styled.header`
+const Wrapper = styled.header`
   color: #ffffff;
   font-size: 24px;
   font-weight: bold;
@@ -16,7 +14,7 @@ const Wrapper: StyledComponentClass = styled.header`
   line-height: 64px;
 `
 
-const Header = ({ title }: { title: string }): React.Element<*> => (
+const Header = ({ title }) => (
   <Wrapper>
     <div>{title}</div>
   </Wrapper>

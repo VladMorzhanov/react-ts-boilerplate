@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import { hot } from 'react-hot-loader'
 import { Route, Router, Switch } from 'react-router'
 import styled from 'styled-components'
@@ -10,7 +10,7 @@ const Container = styled.div`
   height: 100%;
 `
 
-const App = ({ history }: { history: History }): React.Element<*> => (
+const App = ({ history }) => (
   <Container>
     <Router history={history}>
       <Switch>

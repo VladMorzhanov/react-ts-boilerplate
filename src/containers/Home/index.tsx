@@ -1,12 +1,13 @@
-// @flow
-
-import React from 'react'
+import * as React from 'react'
 import { inject, observer } from 'mobx-react'
+import {RouteComponentProps} from 'react-router';
 import Header from '../../components/Header'
-import RootStore from '../../stores/RootStore'
 import Container from '../../components/Container'
 
-const Home = ({ rootStore }: { rootStore: RootStore }): React.Element<*> => (
+export interface MainProps extends RouteComponentProps<any> {}
+export interface MainState {}
+
+const Home = ({ rootStore }) => (
   <>
     <Header title="Home Page" />
     <Container content="Home page content" />

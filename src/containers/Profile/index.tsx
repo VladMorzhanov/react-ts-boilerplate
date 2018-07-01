@@ -1,12 +1,9 @@
-// @flow
-
-import React from 'react'
+import * as React from 'react'
 import { inject, observer } from 'mobx-react'
 import Header from '../../components/Header'
 import Container from '../../components/Container'
-import RootStore from '../../stores/RootStore'
 
-const Profile = ({ rootStore }: { rootStore: RootStore }): React.Element<*> => (
+const Profile = ({ rootStore }) => (
   <>
     <Header title="Profile page" />
     <Container content={rootStore.user.name} />
