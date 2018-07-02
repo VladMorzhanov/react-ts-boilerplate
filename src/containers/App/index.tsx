@@ -1,16 +1,17 @@
-import React from 'react'
-import { hot } from 'react-hot-loader'
-import { Route, Router, Switch } from 'react-router'
-import styled from 'styled-components'
-import Home from '../Home'
-import Profile from '../Profile'
+import * as React from 'react';
+import { hot } from 'react-hot-loader';
+import { Route, Router, Switch } from 'react-router';
+import styled from 'styled-components';
+import Home from 'containers/Home';
+import Profile from 'containers/Profile';
+import { History } from 'history';
 
 const Container = styled.div`
   width: 100%;
   height: 100%;
-`
+`;
 
-const App = ({ history }) => (
+const App = ({ history }: { history: History }) => (
   <Container>
     <Router history={history}>
       <Switch>
@@ -19,6 +20,6 @@ const App = ({ history }) => (
       </Switch>
     </Router>
   </Container>
-)
+);
 
-export default hot(module)(App)
+export default hot(module)(App);
