@@ -12,9 +12,7 @@ render(
 );
 
 if (module.hot) {
-  console.log('MODULE IS HOT!');
   module.hot.accept('./containers/App', () => {
-    console.log('ACCEPTING MODULE!');
     const NextApp = require('./containers/App').default;
 
     render(
