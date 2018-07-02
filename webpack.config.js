@@ -1,17 +1,17 @@
-const webpack = require('webpack')
-const path = require('path')
+const webpack = require('webpack');
+const path = require('path');
 const sourcePath = path.join(__dirname, './src');
 const outPath = path.join(__dirname, './dist');
 const isProduction = process.argv.indexOf('-p') >= 0;
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const WebpackMd5Hash = require('webpack-md5-hash')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const WebpackMd5Hash = require('webpack-md5-hash');
 
 module.exports = {
   context: sourcePath,
   entry: {
-    main: './index.tsx'
+    main: './index'
   },
   output: {
     path: outPath,
@@ -28,16 +28,14 @@ module.exports = {
     extensions: ['.js', '.ts', '.tsx'],
     mainFields: ['module', 'browser', 'main'],
     alias: {
-      'app': path.resolve(__dirname, 'src/')
+      app: path.resolve(__dirname, 'src/')
     }
   },
   module: {
     rules: [
       {
         test: /\.tsx?$/,
-        use: isProduction
-          ? 'ts-loader'
-          : ['babel-loader?plugins=react-hot-loader/babel', 'ts-loader']
+        use: isProduction ? 'ts-loader' : ['babel-loader', 'ts-loader']
       },
       {
         test: /\.(css|scss|sass)$/,
@@ -96,4 +94,4 @@ module.exports = {
     fs: 'empty',
     net: 'empty'
   }
-}
+};

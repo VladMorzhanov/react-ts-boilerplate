@@ -561,6 +561,10 @@
   dependencies:
     source-map "^0.6.1"
 
+"@types/webpack-env@^1.13.6":
+  version "1.13.6"
+  resolved "https://registry.yarnpkg.com/@types/webpack-env/-/webpack-env-1.13.6.tgz#128d1685a7c34d31ed17010fc87d6a12c1de6976"
+
 "@types/webpack@^3.8.8":
   version "3.8.13"
   resolved "https://registry.yarnpkg.com/@types/webpack/-/webpack-3.8.13.tgz#10f3867de1d11ceea50ae3c0c83f84dd250f14f2"
@@ -7898,10 +7902,6 @@ type-is@~1.6.15, type-is@~1.6.16:
 typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
-
-typelevel-ts@^0.3.1:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/typelevel-ts/-/typelevel-ts-0.3.1.tgz#05aec16b3437d6b04a073c9036f9f5ae24ec359d"
 
 typescript@^2.7.2:
   version "2.9.2"

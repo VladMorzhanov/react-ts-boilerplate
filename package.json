@@ -5,7 +5,7 @@
   "description": "React + TypeScript boilerplate written with Mobx, MST and styled-components.",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development --hot --progress --colors --port 3000",
+    "start": "webpack-dev-server --mode development --progress --colors --port 3000",
     "build": "webpack -p --progress --colors"
   },
   "license": "MIT",
@@ -53,6 +53,7 @@
     "webpack-md5-hash": "^0.0.6"
   },
   "dependencies": {
+    "@types/webpack-env": "^1.13.6",
     "classnames": "^2.2.5",
     "history": "^4.7.2",
     "mobx": "^4.3.0",

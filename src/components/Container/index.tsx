@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { inject, observer } from 'mobx-react';
-import { RootStore } from 'stores/RootStore';
+import { RootStore } from '../../stores/RootStore';
 
 const Wrapper = styled.div`
   display: flex;

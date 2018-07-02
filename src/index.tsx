@@ -1,22 +1,27 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { Provider } from 'mobx-react';
-import { createBrowserHistory, History } from 'history';
-import { createStores } from 'stores/createStore';
-import App from 'containers/App';
-import { UserModel } from 'models/UserModel';
+import { render } from 'react-dom';
+import App from './containers/App';
+import { AppContainer } from 'react-hot-loader';
 import './assets/styles/main.scss';
 
-const history: History = createBrowserHistory();
-const defautlUser = UserModel.create({
-  name: 'Default Name'
-});
-const stores = createStores(history, defautlUser);
-
-const root = (
-  <Provider {...stores}>
-    <App history={history} />
-  </Provider>
+render(
+  <AppContainer>
+    <App />
+  </AppContainer>,
+  document.getElementById('app')
 );
 
-ReactDOM.render(root, document.getElementById('app'));
+if (module.hot) {
+  console.log('MODULE IS HOT!');
+  module.hot.accept('./containers/App', () => {
+    console.log('ACCEPTING MODULE!');
+    const NextApp = require('./containers/App').default;
+
+    render(
+      <AppContainer>
+        <NextApp />
+      </AppContainer>,
+      document.getElementById('app')
+    );
+  });
+}

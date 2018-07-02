@@ -1,25 +1,35 @@
 import * as React from 'react';
-import { hot } from 'react-hot-loader';
 import { Route, Router, Switch } from 'react-router';
+import { Provider } from 'mobx-react';
 import styled from 'styled-components';
-import Home from 'containers/Home';
-import Profile from 'containers/Profile';
-import { History } from 'history';
+import { createBrowserHistory, History } from 'history';
+import { createStores } from '../../stores/createStore';
+import { UserModel } from '../../models/UserModel';
+import Home from '../../containers/Home';
+import Profile from '../../containers/Profile';
 
 const Container = styled.div`
   width: 100%;
   height: 100%;
 `;
 
-const App = ({ history }: { history: History }) => (
-  <Container>
-    <Router history={history}>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/profile" component={Profile} />
-      </Switch>
-    </Router>
-  </Container>
+const history: History = createBrowserHistory();
+const defautlUser = UserModel.create({
+  name: 'Default Name'
+});
+const stores = createStores(history, defautlUser);
+
+const App = () => (
+  <Provider {...stores}>
+    <Container>
+      <Router history={history}>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/profile" component={Profile} />
+        </Switch>
+      </Router>
+    </Container>
+  </Provider>
 );
 
-export default hot(module)(App);
+export default App;
