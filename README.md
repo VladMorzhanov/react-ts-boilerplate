@@ -1,5 +1,7 @@
 # React TypeScript Boilerplate
 
+<img src="https://i.imgur.com/dAK9mt2.png"/>
+
 React + TypeScript Boilerplate allows you to start new web project from scratch using React, TypeScript, Mobx-State-Tree, Mobx and Styled components.
 Based on <a href="https://github.com/VladMorzhanov/mst-react-boilerplate">Mobx-State-Tree React Boilerplate</a>
 
