@@ -33,20 +33,6 @@ yarn build
 
 # Main Technologies and libraries
 
-- React
-- React Router
-- TypeScript
-- Mobx-State-Tree
-- Mobx
-- HMR
-- Styled components
-- ESLint
-- Prettier
-- Babel
-- Webpack 4
-- CSS\SCSS
-- PostCSS
-
 - <a href="https://reactjs.org/">React</a>
 - <a href="https://www.typescriptlang.org/">Typescript</a>
 - <a href="https://reacttraining.com/react-router/">React Router</a>
