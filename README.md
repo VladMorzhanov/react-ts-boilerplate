@@ -31,7 +31,7 @@ yarn build
 - Supports styled components.
 - Supports hot-module-reload.
 
-# Main Technologies and libraries
+## Main Technologies and libraries
 
 - <a href="https://reactjs.org/">React</a>
 - <a href="https://www.typescriptlang.org/">Typescript</a>
